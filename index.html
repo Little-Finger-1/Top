@@ -1,0 +1,254 @@
+<html>
+<head>
+<meta charset="UTF-8">
+
+<STYLE TYPE="text/css">
+
+<!--
+body{
+
+width:1280px;
+margin-right:auto;
+margin-left:auto;
+
+background-image:
+url("Image/background/bottom.png"),
+url("Image/background/top.png");
+
+background-size:
+1280px auto,
+1280px auto;
+
+background-repeat:
+no-repeat,
+no-repeat;
+
+background-position:
+bottom center,
+top center;
+
+}
+-->
+
+</STYLE>
+
+<title>
+とある理数科のホームページ
+</title>
+</head>
+<body>
+
+<a name="#00">
+
+<div align="center"><img src="Image/index/Top Icon.png"width="1046"></div><br>
+
+<div align="right">
+   <font size="4">
+   <b>
+   <!-- 日付部分 -->
+   <div id="clock_date"></div>
+   </b>
+   </font>
+</div>
+
+<script type="text/javascript">
+function clock()
+{
+  // 数字が 1ケタのとき、「0」を加えて 2ケタにする
+  var twoDigit =function(num){
+    　     var digit
+         if( num < 10 )
+          { digit = "0" + num; }
+         else { digit = num; }
+         return digit;
+   }
+  // 曜日を表す各文字列の配列
+  var weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat");
+
+ // 現在日時を表すインスタンスを取得
+  var now = new Date();
+
+    var year = now.getFullYear();
+    var month = twoDigit(now.getMonth() + 1)
+    var day = twoDigit(now.getDate());
+    var week = weeks[now.getDay()];
+    var hour = twoDigit(now.getHours());
+    var minute = twoDigit(now.getMinutes());
+    var second = twoDigit(now.getSeconds());
+ //　HTML: <div id="clock_date">(ココの日付文字列を書き換え)</div>
+document.getElementById("clock_date").textContent =  year + "/" + month + "/" + day + " (" + week + ")" + " " + hour + ":" + minute + ":" + second;
+}
+// 上記のclock関数を1000ミリ秒ごと(毎秒)に実行
+setInterval(clock, 1000);
+</script>
+
+<hr color="royalblue">
+
+<div align="left"><font size="4"><b>トップページ</b></font></div>
+<font size="3">
+
+<hr color="royalblue">
+
+<div align="left">
+<br>
+<img src="Image/Icon/My Computer.png"align="left"><font size="4"><b>ようこそ</b></font><br clear="left">
+<br>
+パソコンの勉強の一環でhtmlでホームページを作りました、良かったら見ていってね<br>
+記事は大体プログラミングとか理数科でやった実験とか<br>
+質問があったら私のツイッターにて<br>
+
+<hr color="royalblue">
+
+<img src="Image/Icon/Help.png"align="left"><font size="4"><b>分からない事があったら</b></font><br clear="left">
+<br>
+初めてアクセスした人は必見<br>
+アイコンの意味、ショートカット、遊び方まで全部ここに載ってます<br>
+<br>
+<a href="https://little-finger-1.github.io/Help/"><font size="4"><b>見てみる</b></font></a>
+
+<hr color="royalblue">
+
+<iframe src="Document/Report for iframe.html"width="480"height="270"align="right">
+</iframe>
+<img src="Image/Icon/Report.png"align="left"><font size="4"><b>Recent Report</b></font><br>
+<br clear="left">
+<br>
+最近の更新報告や進捗具合の表示です<br>
+<br clear="right">
+
+<hr color="royalblue">
+
+<div align="center"><font size="4"><b>記事一覧</b></font></div>
+
+<hr color="royalblue">
+
+<img src="Image/index/Syougi.png"align="right">
+<img src="Image/Icon/Syougi.png"align="left">2019.02.05<br>
+<font size="4"><b>2019年部活動紹介</b></font><br clear="left">
+<br>
+将棋部で使う部活動紹介の動画です<br>
+尺が指定されていてとてもやりづらかった<br>
+<br>
+<a href="https://little-finger-1.github.io/Syougi/"><font size="4"><b>見てみる</b></font></a>
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/mp4.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/code.png"align="right">
+<img src="Image/Icon/code.png"align="left">2019.01.30<br>
+<font size="4"><b>コード⇔鍵盤 変換器</b></font><br clear="left">
+<br>
+ピアノコードが読めない人におすすめ<br>
+選択肢から選べるので知らないコードの記憶にも使えます<br>
+また、コード→鍵盤 だけでなく、鍵盤→コード 機能もあります<br>
+展開形には対応していないので注意して<br>
+<br>
+<a href="https://little-finger-1.github.io/Code/"><font size="4"><b>使ってみる</b></font></a>
+<img src="Image/Icon/Text 3.png"align="right">
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/Excel.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/Sarmista.png"align="right">
+<img src="Image/Icon/Sarmista.png"align="left">2019.01.11<br>
+<font size="4"><b>抵抗器「サーミスタ」を用いて温度計を作ってみた</b></font><br clear="left">
+<br>
+クリスマスの日に学校に行ってやった内容です<br>
+アルコール温度計よりも早くて正確な温度計を目指して制作<br>
+パワーポイントは欲張りセット、ワードは忙しい人向け<br>
+<br>
+<a href="https://little-finger-1.github.io/Thermistor/"><font size="4"><b>読んでみる</b></font></a>
+<img src="Image/Icon/Word.png"align="right">
+<img src="Image/Icon/Power Point.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/Mine Sweeper.png"align="right">
+<img src="Image/Icon/Mine Sweeper.png"align="left">2018.12.23<br>
+<font size="4"><b>マインスイーパー</b></font><br clear="left">
+<br>
+懐かしのゲーム、Windows10に実装されてないから作ってみた<br>
+難易度５種類のほか、任意の爆弾の個数に変更可能<br>
+ショートカットキーでボタン、ゲームコントローラーでの操作も楽しめる<br>
+<br>
+<a href="https://little-finger-1.github.io/Mine-Sweeper/"><font size="4"><b>遊んでみる</b></font></a>
+<img src="Image/Icon/Text 3.png"align="right">
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/Excel.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/Calc 2.png"align="right">
+<img src="Image/Icon/Calc 2.png"align="left">2018.11.26<br>
+<font size="4"><b>電卓（改）</b></font><br clear="left">
+<br>
+VBAを使って、電卓を改善してみた<br>
+本物に近いUIにより、使いやすさUP<br>
+より高度な計算が可能に<br>
+<br>
+<a href="https://little-finger-1.github.io/Calc-2/"><font size="4"><b>遊んでみる</b></font></a>
+<img src="Image/Icon/Text 3.png"align="right">
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/Excel.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/Calc.png"align="right">
+<img src="Image/Icon/Calc.png"align="left">2018.10.02<br>
+<font size="4"><b>電卓</b></font><br clear="left">
+<br>
+メッセージボックスを使った電卓を作ってみた<br>
+２つの項で四則演算が可能<br>
+<br>
+<a href="https://little-finger-1.github.io/Calc/"><font size="4"><b>遊んでみる</b></font></a>
+<img src="Image/Icon/Text 3.png"align="right">
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/Excel.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/kyumen.png"align="right">
+<img src="Image/Icon/kyumen.png"align="left">2018.09.04<br>
+<font size="4"><b>球面幾何学とはなにか</b></font><br clear="left">
+<br>
+夏休みにずっと考えていたこと<br>
+かなり難しい文章で書かれている<br>
+<br>
+<a href="https://little-finger-1.github.io/kyumen/"><font size="4"><b>読んでみる</b></font></a>
+<img src="Image/Icon/HTML.png"align="right">
+<img src="Image/Icon/Power Point.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<img src="Image/index/Sanmoku.png"align="right">
+<img src="Image/Icon/Sanmoku.png"align="left">2018.06.24<br>
+<font size="4"><b>３目並べ</b></font><br clear="left">
+<br>
+３×３マスの○×３目並べを作ってみた<br>
+勝敗判定、引き分け判定実装済み<br>
+<br>
+<a href="https://little-finger-1.github.io/Sanmoku/"><font size="4"><b>遊んでみる</b></font></a>
+<img src="Image/Icon/Excel.png"align="right"><div align="right">使用ソフトウェア</div>
+<br clear="right">
+
+<hr color="royalblue">
+
+<font size="4"><b>各ページへのリンク（クリックでアイコンのページに飛びます）</b></font>
+
+<hr color="royalblue">
+
+<iframe allowtransparency="true"src="https://little-finger-1.github.io/rink/"frameborder="0"width="100%"height="180">
+サンプル
+</iframe>
+
+</body>
+</html>
